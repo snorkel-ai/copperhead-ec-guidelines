@@ -1,0 +1,76 @@
+name: Deploy Project Copperhead Guidelines
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      # Copperhead-only allowlist (not Eagle / EnterpriseEnv lists).
+      # Repo → Settings → Secrets and variables → Actions → Variables
+      # → VITE_COPPERHEAD_WHITELIST = comma- or newline-separated emails
+      - name: Write Copperhead allowlist for production build
+        env:
+          VITE_COPPERHEAD_WHITELIST: ${{ vars.VITE_COPPERHEAD_WHITELIST }}
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+          const raw = process.env.VITE_COPPERHEAD_WHITELIST ?? "";
+          const emails = raw
+            .replace(/\r\n/g, "\n")
+            .replace(/\r/g, "\n")
+            .split(/[,;\n]+/)
+            .map((s) => s.trim().toLowerCase())
+            .filter(Boolean);
+          if (emails.length === 0) {
+            console.error(
+              "VITE_COPPERHEAD_WHITELIST is empty. Add the GitHub Actions variable before deploying."
+            );
+            process.exit(1);
+          }
+          fs.writeFileSync(
+            ".env.production.local",
+            "VITE_COPPERHEAD_WHITELIST=" + JSON.stringify(raw) + "\n"
+          );
+          console.log("Copperhead allowlist addresses:", emails.length);
+          NODE
+
+      - name: Build
+        # Never disable auth on the published site.
+        run: npm run build
+        env:
+          VITE_DISABLE_AUTH: "false"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
