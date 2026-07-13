@@ -111,8 +111,7 @@ export default function App() {
           </div>
           <p>
             Access is restricted to emails on the{" "}
-            <strong>Project Copperhead</strong> allowlist. This list is separate
-            from Project Eagle / EnterpriseEnv training sites.
+            <strong>Project Copperhead</strong> allowlist.
           </p>
           <form className="auth-form" onSubmit={handleSignIn}>
             <input

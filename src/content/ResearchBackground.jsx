@@ -2,16 +2,16 @@
  * Educational background for ECs on computer-use agents.
  * Do NOT cite external papers, project sites, researchers, or partner names here.
  */
-export function ResearchBackgroundSection() {
-  return (
-    <div className="workflow-content">
+export function ResearchBackgroundSection({ nested = false }) {
+  const body = (
+    <>
       <section className="section">
         <h2>Computer-Use Agents — Background</h2>
         <div className="section-body">
           <p>
             Project Copperhead builds <strong>computer-use agent (CUA)</strong>{" "}
             environments and tasks: multi-step professional work on a real
-            desktop, not single-turn Q&amp;A. This page explains the problem
+            desktop, not single-turn Q&amp;A. This section explains the problem
             space so you can review tasks with the right mental model. It does
             not ask you to study external research materials.
           </p>
@@ -142,8 +142,16 @@ export function ResearchBackgroundSection() {
               the work.
             </li>
           </ol>
+          <p style={{ marginTop: 16 }}>
+            While working a live task on the contributor platform, use the{" "}
+            <strong>Platform Review Guide</strong> tab to walk the form
+            section by section.
+          </p>
         </div>
       </section>
-    </div>
+    </>
   );
+
+  if (nested) return body;
+  return <div className="workflow-content">{body}</div>;
 }

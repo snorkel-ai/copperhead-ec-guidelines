@@ -1,3 +1,5 @@
+import { ResearchBackgroundSection } from "./ResearchBackground";
+
 export function OverviewSection() {
   return (
     <div className="workflow-content">
@@ -53,25 +55,7 @@ export function OverviewSection() {
         </ul>
       </section>
 
-      <section className="section">
-        <h2>Why Background Context Matters</h2>
-        <div className="section-body">
-          <p>
-            Copperhead tasks involve open-ended computer use on real desktops.
-            Agents observe the screen (and sometimes structured UI information),
-            issue keyboard and mouse actions, and must finish multi-step,
-            often multi-app workflows. Humans still succeed far more often than
-            current models—your reviews help keep tasks fair, solvable, and
-            professionally credible.
-          </p>
-          <p>
-            If you are new to computer-use agents, read the{" "}
-            <strong>Computer-Use Background</strong> tab before your first
-            reviews. Use the <strong>Platform Review Guide</strong> tab while
-            working a live task on the contributor platform.
-          </p>
-        </div>
-      </section>
+      <ResearchBackgroundSection nested />
     </div>
   );
 }

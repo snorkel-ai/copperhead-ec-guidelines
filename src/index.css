@@ -458,6 +458,72 @@ a {
   color: #4b5563;
 }
 
+.ch-pay-rates .ch-pay-brand {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.ch-pay-table {
+  width: 100%;
+  max-width: 720px;
+  border-collapse: collapse;
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
+.ch-pay-table th,
+.ch-pay-table td {
+  border: 1px solid #d1d5db;
+  padding: 10px 14px;
+  vertical-align: top;
+  min-height: 1.5em;
+}
+
+.ch-pay-table th:nth-child(1),
+.ch-pay-table td:nth-child(1) {
+  text-align: left;
+}
+
+.ch-pay-table th:nth-child(2),
+.ch-pay-table td:nth-child(2) {
+  text-align: center;
+}
+
+.ch-pay-table th:nth-child(3),
+.ch-pay-table td:nth-child(3) {
+  text-align: left;
+}
+
+.ch-pay-role-row th {
+  text-align: center;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ch-pay-role-row--submitter th {
+  background: #dbeafe;
+}
+
+.ch-pay-role-row--reviewer th {
+  background: #dcfce7;
+}
+
+.ch-pay-colhead-row th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+}
+
+.ch-pay-colhead-row th:nth-child(2) {
+  text-align: center;
+}
+
+.ch-pay-table tbody td {
+  background: #ffffff;
+  height: 42px;
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 24px 16px;

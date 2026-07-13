@@ -1,7 +1,7 @@
 import { OverviewSection } from "./Overview";
 import { GettingStartedSection } from "./GettingStarted";
 import { PlatformReviewSection } from "./PlatformReview";
-import { ResearchBackgroundSection } from "./ResearchBackground";
+import { PayRatesSection } from "./PayRates";
 import { ReferenceSection } from "./Reference";
 
 export const COPPERHEAD_TABS = [
@@ -15,7 +15,7 @@ export const COPPERHEAD_TABS = [
     ],
   },
   { key: "platform-review", label: "Platform Review Guide" },
-  { key: "research", label: "Computer-Use Background" },
+  { key: "pay-rates", label: "Pay Rates" },
   { key: "reference", label: "Reference" },
 ];
 
@@ -29,7 +29,7 @@ export function buildCopperheadContent(setActiveTab) {
       <GettingStartedSection setActiveTab={setActiveTab} focus="workflow" />
     ),
     "platform-review": <PlatformReviewSection />,
-    research: <ResearchBackgroundSection />,
+    "pay-rates": <PayRatesSection />,
     reference: <ReferenceSection />,
   };
 }
