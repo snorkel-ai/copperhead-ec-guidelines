@@ -8,6 +8,13 @@ import { ReviewerGuidelinesSection } from "./ReviewerGuidelines";
 import { PayRatesSection } from "./PayRates";
 import { ReferenceSection } from "./Reference";
 
+/** True if this tab or any nested child matches the active key. */
+export function tabContainsActive(tab, activeTab) {
+  if (tab.key === activeTab) return true;
+  if (!tab.children) return false;
+  return tab.children.some((child) => tabContainsActive(child, activeTab));
+}
+
 export const COPPERHEAD_TABS = [
   {
     key: "getting-started",
@@ -15,24 +22,30 @@ export const COPPERHEAD_TABS = [
     children: [
       { key: "gs-access", label: "Platform Access" },
       { key: "gs-slack", label: "Slack & Code of Conduct" },
+      { key: "overview", label: "Welcome to Copperhead" },
     ],
   },
-  { key: "overview", label: "Welcome to Copperhead" },
-  { key: "good-task", label: "What Makes a Good Task?" },
-  { key: "evaluate-task", label: "Evaluate the Task" },
   {
-    key: "submission",
-    label: "Complete your Evaluation",
+    key: "pilot-guidelines",
+    label: "copperhead_pilot guidelines",
     children: [
-      { key: "sub-overview", label: "Overview" },
-      { key: "sub-instructions", label: "1. Task Instructions" },
-      { key: "sub-rubrics", label: "2. Rubrics and Weights" },
-      { key: "sub-resources", label: "3. Resources for Completion" },
-      { key: "sub-overall", label: "4. Overall Assessment" },
-      { key: "sub-complete", label: "5. Complete the Submission" },
+      { key: "good-task", label: "What Makes a Good Task?" },
+      { key: "evaluate-task", label: "Evaluate the Task" },
+      {
+        key: "submission",
+        label: "Complete your Evaluation",
+        children: [
+          { key: "sub-overview", label: "Overview" },
+          { key: "sub-instructions", label: "1. Task Instructions" },
+          { key: "sub-rubrics", label: "2. Rubrics and Weights" },
+          { key: "sub-resources", label: "3. Resources for Completion" },
+          { key: "sub-overall", label: "4. Overall Assessment" },
+          { key: "sub-complete", label: "5. Complete the Submission" },
+        ],
+      },
+      { key: "difficulty", label: "Rating Task Difficulty" },
     ],
   },
-  { key: "difficulty", label: "Rating Task Difficulty" },
   { key: "reviewer-guidelines", label: "Reviewer Guidelines" },
   { key: "pay-rates", label: "Pay Rates" },
   { key: "reference", label: "Reference" },
@@ -45,12 +58,24 @@ export function buildCopperheadContent(setActiveTab) {
     overview: <OverviewSection />,
     "good-task": <GoodTaskSection />,
     "evaluate-task": <EvaluateTaskSection />,
-    "sub-overview": <SubmissionSection focus="overview" setActiveTab={setActiveTab} />,
-    "sub-instructions": <SubmissionSection focus="instructions" setActiveTab={setActiveTab} />,
-    "sub-rubrics": <SubmissionSection focus="rubrics" setActiveTab={setActiveTab} />,
-    "sub-resources": <SubmissionSection focus="resources" setActiveTab={setActiveTab} />,
-    "sub-overall": <SubmissionSection focus="overall" setActiveTab={setActiveTab} />,
-    "sub-complete": <SubmissionSection focus="complete" setActiveTab={setActiveTab} />,
+    "sub-overview": (
+      <SubmissionSection focus="overview" setActiveTab={setActiveTab} />
+    ),
+    "sub-instructions": (
+      <SubmissionSection focus="instructions" setActiveTab={setActiveTab} />
+    ),
+    "sub-rubrics": (
+      <SubmissionSection focus="rubrics" setActiveTab={setActiveTab} />
+    ),
+    "sub-resources": (
+      <SubmissionSection focus="resources" setActiveTab={setActiveTab} />
+    ),
+    "sub-overall": (
+      <SubmissionSection focus="overall" setActiveTab={setActiveTab} />
+    ),
+    "sub-complete": (
+      <SubmissionSection focus="complete" setActiveTab={setActiveTab} />
+    ),
     difficulty: <DifficultyRatingSection />,
     "reviewer-guidelines": <ReviewerGuidelinesSection />,
     "pay-rates": <PayRatesSection />,

@@ -1,5 +1,9 @@
 import { useMemo, useState } from "react";
-import { buildCopperheadContent, COPPERHEAD_TABS } from "./content/CopperheadContent";
+import {
+  buildCopperheadContent,
+  COPPERHEAD_TABS,
+  tabContainsActive,
+} from "./content/CopperheadContent";
 
 const AUTH_STORAGE_KEY = "copperhead-auth-email";
 /** Local content drafting only — never set this for GitHub Pages builds. */
@@ -166,15 +170,13 @@ export default function App() {
                 <button
                   type="button"
                   className={`tab ${
-                    tab.children.some((c) => c.key === activeTab) ? "tab-active" : ""
+                    tabContainsActive(tab, activeTab) ? "tab-active" : ""
                   }`}
                 >
                   {tab.label}
                   <svg
                     className={`tab-arrow ${
-                      tab.children.some((c) => c.key === activeTab)
-                        ? "tab-arrow-active"
-                        : ""
+                      tabContainsActive(tab, activeTab) ? "tab-arrow-active" : ""
                     }`}
                     width="12"
                     height="12"
@@ -187,18 +189,42 @@ export default function App() {
                   </svg>
                 </button>
                 <div className="tab-dropdown-menu">
-                  {tab.children.map((child) => (
-                    <button
-                      key={child.key}
-                      type="button"
-                      className={`tab-dropdown-item ${
-                        activeTab === child.key ? "tab-dropdown-item-active" : ""
-                      }`}
-                      onClick={() => setActiveTab(child.key)}
-                    >
-                      {child.label}
-                    </button>
-                  ))}
+                  {tab.children.map((child) =>
+                    child.children ? (
+                      <div key={child.key} className="tab-dropdown-group">
+                        <div className="tab-dropdown-group-label">
+                          {child.label}
+                        </div>
+                        {child.children.map((grandchild) => (
+                          <button
+                            key={grandchild.key}
+                            type="button"
+                            className={`tab-dropdown-item tab-dropdown-item--nested ${
+                              activeTab === grandchild.key
+                                ? "tab-dropdown-item-active"
+                                : ""
+                            }`}
+                            onClick={() => setActiveTab(grandchild.key)}
+                          >
+                            {grandchild.label}
+                          </button>
+                        ))}
+                      </div>
+                    ) : (
+                      <button
+                        key={child.key}
+                        type="button"
+                        className={`tab-dropdown-item ${
+                          activeTab === child.key
+                            ? "tab-dropdown-item-active"
+                            : ""
+                        }`}
+                        onClick={() => setActiveTab(child.key)}
+                      >
+                        {child.label}
+                      </button>
+                    )
+                  )}
                 </div>
               </div>
             ) : (

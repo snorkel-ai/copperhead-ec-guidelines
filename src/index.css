@@ -199,6 +199,30 @@ h1 {
   background: #e2e8f0;
 }
 
+.tab-dropdown-group {
+  padding: 4px 0 6px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.tab-dropdown-group:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.tab-dropdown-group-label {
+  padding: 8px 14px 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.tab-dropdown-item--nested {
+  padding-left: 22px;
+  font-size: 0.9rem;
+}
+
 .section + .section {
   margin-top: 32px;
 }
