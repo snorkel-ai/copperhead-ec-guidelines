@@ -10,8 +10,8 @@ export const COPPERHEAD_TABS = [
     key: "getting-started",
     label: "Getting Started",
     children: [
-      { key: "gs-access", label: "Access & Setup" },
-      { key: "gs-workflow", label: "Workflow Basics" },
+      { key: "gs-access", label: "Platform Access" },
+      { key: "gs-slack", label: "Slack & Code of Conduct" },
     ],
   },
   { key: "platform-review", label: "Platform Review Guide" },
@@ -19,15 +19,11 @@ export const COPPERHEAD_TABS = [
   { key: "reference", label: "Reference" },
 ];
 
-export function buildCopperheadContent(setActiveTab) {
+export function buildCopperheadContent(_setActiveTab) {
   return {
     overview: <OverviewSection />,
-    "gs-access": (
-      <GettingStartedSection setActiveTab={setActiveTab} focus="access" />
-    ),
-    "gs-workflow": (
-      <GettingStartedSection setActiveTab={setActiveTab} focus="workflow" />
-    ),
+    "gs-access": <GettingStartedSection focus="access" />,
+    "gs-slack": <GettingStartedSection focus="slack" />,
     "platform-review": <PlatformReviewSection />,
     "pay-rates": <PayRatesSection />,
     reference: <ReferenceSection />,

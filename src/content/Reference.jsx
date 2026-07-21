@@ -49,7 +49,12 @@ export function ReferenceSection() {
         <div className="section-body">
           <ul className="plain-list">
             <li>These Project Copperhead guidelines (this site)</li>
-            <li>The assigned task materials on the contributor platform</li>
+            <li>The Snorkel Expert Platform task materials</li>
+            <li>
+              Slack — especially{" "}
+              <code>#copperhead-ec-announcements</code> and the Copperhead
+              channel canvas
+            </li>
             <li>Your own professional judgment for the listed domain</li>
           </ul>
           <p>

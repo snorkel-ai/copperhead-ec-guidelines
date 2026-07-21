@@ -405,6 +405,45 @@ a {
   margin-top: 8px;
 }
 
+.guide-mark {
+  background: #fef08a;
+  color: inherit;
+  padding: 0 0.15em;
+  border-radius: 2px;
+}
+
+.guide-figure {
+  margin: 16px 0 8px;
+}
+
+.guide-img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.info-box {
+  border: 1px solid #93c5fd;
+  background: #f8fbff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+
+.info-box h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: #1e3a8a;
+}
+
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
 .rating-cards {
   margin: 12px 0 0;
   padding: 0;
