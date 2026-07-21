@@ -27,7 +27,7 @@ export const COPPERHEAD_TABS = [
   },
   {
     key: "pilot-guidelines",
-    label: "copperhead_pilot guidelines",
+    label: "Copperhead Pilot Submission Guide",
     children: [
       { key: "good-task", label: "What Makes a Good Task?" },
       { key: "evaluate-task", label: "Evaluate the Task" },
