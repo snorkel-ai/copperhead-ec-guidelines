@@ -60,7 +60,7 @@ export default function App() {
     return stored.toLowerCase();
   });
   const [statusMessage, setStatusMessage] = useState("");
-  const [activeTab, setActiveTab] = useState("overview");
+  const [activeTab, setActiveTab] = useState("gs-access");
   const content = useMemo(() => buildCopperheadContent(setActiveTab), []);
 
   const allowlistConfigured = whitelist.length > 0;

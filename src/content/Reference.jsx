@@ -12,33 +12,39 @@ export function ReferenceSection() {
             </span>
           </li>
           <li>
-            <strong>Golden solution</strong>
+            <strong>Task Instructions</strong>
             <span>
-              Reference final output for a task. On the platform, you check
-              whether one exists and whether it matches the expected
-              deliverable.
+              The written professional request describing the goal, context, and
+              deliverable for the agent to complete.
             </span>
           </li>
           <li>
-            <strong>Rubric / verifier</strong>
+            <strong>Rubric and Weights</strong>
             <span>
-              Criteria or checks that define successful completion—must measure
-              the real requirements, not vague vibes.
+              Categories and percentage weights used to score successful task
+              completion; should align with what the Task Instructions ask for.
             </span>
           </li>
           <li>
-            <strong>Structured UI / accessibility info</strong>
+            <strong>Reference Solution Path</strong>
             <span>
-              Machine-readable description of on-screen elements (buttons,
-              fields, labels) some agents use alongside or instead of
-              screenshots.
+              Proposed step-by-step / subgoal sequence for completing the task.
+              Review it for realism and completeness; do not execute it.
             </span>
           </li>
           <li>
-            <strong>Multi-app workflow</strong>
+            <strong>Distractors</strong>
             <span>
-              A task that requires coordinating more than one application to
-              produce the final deliverable.
+              Plausible but irrelevant or outdated materials (e.g., conflicting
+              drafts) that add fair difficulty without making the correct
+              solution unavailable.
+            </span>
+          </li>
+          <li>
+            <strong>ETC</strong>
+            <span>
+              Estimated Time to Complete — how long a competent professional
+              would need to finish the underlying task (not your review time).
             </span>
           </li>
         </ul>
@@ -62,23 +68,6 @@ export function ReferenceSection() {
             parties for this engagement. Everything you need for review is on
             the platform or in these guidelines.
           </p>
-        </div>
-      </section>
-
-      <section className="section">
-        <h2>Open Items</h2>
-        <div className="section-body">
-          <ul className="plain-list">
-            <li>
-              <strong>Failure Modes</strong> platform wording may still be
-              refined—until then, answer with 1–2 concrete risks that could
-              block successful completion.
-            </li>
-            <li>
-              A separate Task Quality Rating Guide may be added later for the
-              7-point overall quality question.
-            </li>
-          </ul>
         </div>
       </section>
     </div>

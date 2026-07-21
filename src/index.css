@@ -349,6 +349,21 @@ code {
   margin-top: 10px;
 }
 
+.evaluate-steps li {
+  margin-bottom: 16px;
+}
+
+.evaluate-steps li strong {
+  display: block;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.evaluate-steps li > span {
+  display: block;
+  color: #4b5563;
+}
+
 .inline-link {
   color: #b45309;
   background: none;

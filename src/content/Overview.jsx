@@ -1,61 +1,41 @@
-import { ResearchBackgroundSection } from "./ResearchBackground";
-
 export function OverviewSection() {
   return (
     <div className="workflow-content">
       <section className="section">
-        <h2>What This Project Is About</h2>
+        <h2>Welcome to Copperhead Reviews</h2>
         <div className="section-body">
+          <h3>What This Project Is About</h3>
           <p>
-            The goal of <strong>Project Copperhead</strong> is to build{" "}
-            <strong>computer-use agent (CUA)</strong> environments and tasks that
-            reflect real, complex professional work. These tasks represent the
-            multi-step workflows people perform across desktop applications,
-            terminal environments, and web services to produce a concrete
-            deliverable.
+            The goal of this project is to build computer-use agent (CUA)
+            environments and tasks that reflect real, complex professional work.
+            These tasks represent the multi-step workflows people perform across
+            desktop applications, terminal environments, and web services to
+            produce a concrete deliverable.
           </p>
           <p>
-            Within the Snorkel contributor platform, you will be provided with all
-            of the information needed to evaluate each task. As a domain expert,
-            your responsibility is to determine whether the task is{" "}
-            <strong>well-designed</strong>, <strong>realistic</strong>, and{" "}
-            <strong>appropriate for the specified professional domain</strong>, and
-            to assess or refine the task solution. Your feedback will drive
-            improvements in these tasks and the pipeline.
+            Within the Snorkel contributor platform, you will be provided with
+            everything needed to evaluate a task, including the task
+            instructions, supporting files, expected outputs, and the proposed
+            step-by-step solution (subgoals).
+          </p>
+          <p>
+            Your role is to review the task from the perspective of a
+            professional who has been asked to complete it. Determine whether
+            the task is realistic, whether it can be successfully completed using
+            the provided files and resources, and whether the proposed solution
+            reflects how you would approach the work. Identify any issues,
+            validate the proposed solution, and provide feedback that will help
+            improve both the task quality and the overall pipeline.
+          </p>
+          <p>
+            <strong>
+              You are not expected to create new tasks, rewrite task
+              instructions, or directly edit the task itself—your role is to
+              evaluate the task and provide expert feedback.
+            </strong>
           </p>
         </div>
       </section>
-
-      <section className="section">
-        <h2>How Your Work Fits In</h2>
-        <ul className="workflow-list">
-          <li>
-            <strong>Task quality</strong>
-            <span>
-              Decide if instructions, files, apps, and deliverables form a
-              realistic professional workflow someone in the domain would
-              actually perform.
-            </span>
-          </li>
-          <li>
-            <strong>Evaluation assets</strong>
-            <span>
-              Check that rubrics / verifiers and golden solutions correctly
-              measure successful completion—not just that something looks
-              plausible.
-            </span>
-          </li>
-          <li>
-            <strong>Overall assessment</strong>
-            <span>
-              Call out failure risks, rate overall quality, estimate time and
-              difficulty for a mid-level professional working without LLMs.
-            </span>
-          </li>
-        </ul>
-      </section>
-
-      <ResearchBackgroundSection nested />
     </div>
   );
 }
