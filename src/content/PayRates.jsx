@@ -22,19 +22,9 @@ export function PayRatesSection() {
         </thead>
         <tbody>
           <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>copperhead_pilot</td>
+            <td>$35.00</td>
+            <td>Accepted Submission</td>
           </tr>
         </tbody>
       </table>
@@ -52,19 +42,9 @@ export function PayRatesSection() {
         </thead>
         <tbody>
           <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>copperhead_pilot</td>
+            <td>$15.00</td>
+            <td>Review Performed</td>
           </tr>
         </tbody>
       </table>
