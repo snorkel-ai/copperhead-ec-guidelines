@@ -92,7 +92,7 @@ function PlatformAccessSection() {
           </p>
           <GuideImage
             src="platform-home-projects.png"
-            alt="My projects home screen for Project Copperhead_Production showing Review, Adjudication, and Submission tasks"
+            alt="My projects home screen for Copperhead_Pilot showing Adjudication, Review, and Submission tasks, with Submission highlighted"
           />
         </div>
       </section>
