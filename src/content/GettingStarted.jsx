@@ -160,6 +160,24 @@ function SlackSection() {
       </section>
 
       <section className="section">
+        <h2>Have questions?</h2>
+        <div className="section-body">
+          <p>
+            For Project Copperhead inquiries, use the{" "}
+            <code>#ec-copperhead-helpdesk</code> Slack Channel for a quick
+            response.
+          </p>
+          <p>
+            For general EC experience questions, please visit the{" "}
+            <a href={FAQ_URL} target="_blank" rel="noopener noreferrer">
+              EC FAQ page
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
         <h2>Slack Code of Conduct</h2>
         <div className="section-body">
           <p>
