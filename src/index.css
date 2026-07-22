@@ -612,3 +612,314 @@ a {
     align-items: flex-start;
   }
 }
+
+/* File Explorer (Copperhead — task files analog to Eagle DB Explorer) */
+.fe-explorer {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 640px;
+  background: #ffffff;
+  margin-top: 8px;
+}
+
+.fe-sidebar {
+  background: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.fe-sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fe-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fe-task-select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  background: #ffffff;
+  color: #111827;
+}
+
+.fe-task-label {
+  font-size: 0.85rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.fe-sidebar-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fe-search {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: #ffffff;
+  color: #111827;
+}
+
+.fe-search:focus,
+.fe-task-select:focus {
+  outline: none;
+  border-color: #10163a;
+  box-shadow: 0 0 0 2px rgba(16, 22, 58, 0.1);
+}
+
+.fe-search::placeholder {
+  color: #9ca3af;
+}
+
+.fe-file-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.fe-file-list li {
+  margin: 0;
+}
+
+.fe-file-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #374151;
+  text-align: left;
+  transition: background 0.1s;
+  gap: 2px;
+}
+
+.fe-file-btn:hover {
+  background: #e5e7eb;
+}
+
+.fe-file-btn-active {
+  background: #10163a !important;
+  color: #ffffff;
+}
+
+.fe-file-btn-active .fe-file-meta {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.fe-file-name {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  word-break: break-word;
+}
+
+.fe-file-meta {
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+.fe-no-results,
+.fe-empty {
+  padding: 16px 12px;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.fe-main {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.fe-main-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.fe-main-title {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  border: none;
+  padding: 0;
+  word-break: break-word;
+}
+
+.fe-main-stats {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.fe-download {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #10163a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.fe-viewer {
+  flex: 1;
+  min-height: 480px;
+  overflow: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.fe-pdf-frame {
+  width: 100%;
+  height: min(70vh, 720px);
+  border: none;
+  display: block;
+}
+
+.fe-docx-html {
+  padding: 20px 24px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #1f2937;
+}
+
+.fe-docx-html p {
+  margin: 0 0 0.85em;
+}
+
+.fe-docx-html h1,
+.fe-docx-html h2,
+.fe-docx-html h3 {
+  margin: 1em 0 0.5em;
+  color: #111827;
+}
+
+.fe-docx-html table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+  font-size: 0.88rem;
+}
+
+.fe-docx-html td,
+.fe-docx-html th {
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+}
+
+.fe-text {
+  margin: 0;
+  padding: 16px 18px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #111827;
+}
+
+.fe-table-wrap {
+  overflow-x: auto;
+}
+
+.fe-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.fe-data-table th {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+}
+
+.fe-data-table td {
+  border-bottom: 1px solid #f3f4f6;
+  padding: 8px 12px;
+  color: #4b5563;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.fe-sheet-title {
+  margin: 0;
+  padding: 12px 14px 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.fe-error {
+  padding: 24px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.fe-error a {
+  color: #10163a;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .fe-explorer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .fe-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    max-height: 320px;
+  }
+}

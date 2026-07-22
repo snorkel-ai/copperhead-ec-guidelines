@@ -7,6 +7,7 @@ import { DifficultyRatingSection } from "./DifficultyRating";
 import { ReviewerGuidelinesSection } from "./ReviewerGuidelines";
 import { PayRatesSection } from "./PayRates";
 import { ReferenceSection } from "./Reference";
+import FileExplorer from "./FileExplorer";
 
 /** True if this tab or any nested child matches the active key. */
 export function tabContainsActive(tab, activeTab) {
@@ -47,6 +48,7 @@ export const COPPERHEAD_TABS = [
     ],
   },
   { key: "reviewer-guidelines", label: "Reviewer Guidelines" },
+  { key: "file-explorer", label: "File Explorer" },
   { key: "pay-rates", label: "Pay Rates" },
   { key: "reference", label: "Reference" },
 ];
@@ -78,6 +80,7 @@ export function buildCopperheadContent(setActiveTab) {
     ),
     difficulty: <DifficultyRatingSection />,
     "reviewer-guidelines": <ReviewerGuidelinesSection />,
+    "file-explorer": <FileExplorer />,
     "pay-rates": <PayRatesSection />,
     reference: <ReferenceSection />,
   };

@@ -1,0 +1,13 @@
+Census_Tract,County_Name,State,Tract_Minority_Pct,Tract_Income_Level,Tract_Median_Family_Income,MSA_MD_Median_Family_Income,Tract_to_MSA_MFI_Pct,LMI_Flag,MMCT_Flag
+55079000100,Milwaukee County,WI,0.724,Low,47250,92800,0.509,Y,Y
+55079000201,Milwaukee County,WI,0.586,Moderate,61100,92800,0.658,Y,Y
+55079000300,Milwaukee County,WI,0.438,Middle,81100,92800,0.874,N,N
+55079000400,Milwaukee County,WI,0.309,Upper,121600,92800,1.31,N,N
+55025001101,Dane County,WI,0.281,Middle,104900,113400,0.925,N,N
+55025001202,Dane County,WI,0.412,Moderate,74100,113400,0.653,Y,N
+55133000301,Waukesha County,WI,0.126,Upper,139300,92800,1.501,N,N
+55133000402,Waukesha County,WI,0.184,Middle,99700,92800,1.074,N,N
+55009010100,Brown County,WI,0.363,Middle,78200,86600,0.903,N,N
+55009010200,Brown County,WI,0.226,Moderate,61500,86600,0.71,Y,N
+55101000400,Racine County,WI,0.534,Moderate,59300,89400,0.663,Y,Y
+55101000500,Racine County,WI,0.321,Middle,79300,89400,0.887,N,N

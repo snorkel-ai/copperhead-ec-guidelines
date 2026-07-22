@@ -1,0 +1,114 @@
+{
+  "tasks": [
+    {
+      "id": "health_gantt_89_discharge_plan_400",
+      "label": "Health Gantt \u2014 Discharge Plan 400",
+      "files": [
+        {
+          "name": "01 - Revision Packet - Round 1.pdf",
+          "path": "health_gantt_89_discharge_plan_400/required_files/01 - Revision Packet - Round 1.pdf",
+          "kind": "required",
+          "ext": "pdf",
+          "size_bytes": 3275
+        },
+        {
+          "name": "02 - Revision Notice - Mid-week Pull-forward.pdf",
+          "path": "health_gantt_89_discharge_plan_400/required_files/02 - Revision Notice - Mid-week Pull-forward.pdf",
+          "kind": "required",
+          "ext": "pdf",
+          "size_bytes": 4119
+        },
+        {
+          "name": "03 - FINAL Same-Morning Tightening.pdf",
+          "path": "health_gantt_89_discharge_plan_400/required_files/03 - FINAL Same-Morning Tightening.pdf",
+          "kind": "required",
+          "ext": "pdf",
+          "size_bytes": 4479
+        },
+        {
+          "name": "Discharge Transport Protocol.pdf",
+          "path": "health_gantt_89_discharge_plan_400/required_files/Discharge Transport Protocol.pdf",
+          "kind": "required",
+          "ext": "pdf",
+          "size_bytes": 5377
+        },
+        {
+          "name": "discharge_wave_baseline.gan",
+          "path": "health_gantt_89_discharge_plan_400/required_files/discharge_wave_baseline.gan",
+          "kind": "required",
+          "ext": "gan",
+          "size_bytes": 29361
+        }
+      ]
+    },
+    {
+      "id": "hmda_fair_lending_review",
+      "label": "HMDA Fair Lending Review",
+      "files": [
+        {
+          "name": "branch_cra_performance_summary.pdf",
+          "path": "hmda_fair_lending_review/required_files/branch_cra_performance_summary.pdf",
+          "kind": "required",
+          "ext": "pdf",
+          "size_bytes": 3297
+        },
+        {
+          "name": "consumer_complaint_log_2024.xlsx",
+          "path": "hmda_fair_lending_review/required_files/consumer_complaint_log_2024.xlsx",
+          "kind": "required",
+          "ext": "xlsx",
+          "size_bytes": 6527
+        },
+        {
+          "name": "fair_lending_testing_methodology.docx",
+          "path": "hmda_fair_lending_review/required_files/fair_lending_testing_methodology.docx",
+          "kind": "required",
+          "ext": "docx",
+          "size_bytes": 37871
+        },
+        {
+          "name": "ffiec_census_tract_extract_2025.csv",
+          "path": "hmda_fair_lending_review/required_files/ffiec_census_tract_extract_2025.csv",
+          "kind": "required",
+          "ext": "csv",
+          "size_bytes": 961
+        },
+        {
+          "name": "hmda_action_code_reference.docx",
+          "path": "hmda_fair_lending_review/required_files/hmda_action_code_reference.docx",
+          "kind": "required",
+          "ext": "docx",
+          "size_bytes": 38954
+        },
+        {
+          "name": "hmda_lar_extract_2024.csv",
+          "path": "hmda_fair_lending_review/required_files/hmda_lar_extract_2024.csv",
+          "kind": "required",
+          "ext": "csv",
+          "size_bytes": 16424
+        },
+        {
+          "name": "hmda_review_scope_notes.docx",
+          "path": "hmda_fair_lending_review/required_files/hmda_review_scope_notes.docx",
+          "kind": "required",
+          "ext": "docx",
+          "size_bytes": 38479
+        },
+        {
+          "name": "peer_lender_comparison_2024.csv",
+          "path": "hmda_fair_lending_review/required_files/peer_lender_comparison_2024.csv",
+          "kind": "required",
+          "ext": "csv",
+          "size_bytes": 553
+        },
+        {
+          "name": "prior_committee_summary.docx",
+          "path": "hmda_fair_lending_review/required_files/prior_committee_summary.docx",
+          "kind": "required",
+          "ext": "docx",
+          "size_bytes": 38457
+        }
+      ]
+    }
+  ]
+}

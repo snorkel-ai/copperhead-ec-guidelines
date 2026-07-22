@@ -269,7 +269,7 @@ function RubricsAndWeights() {
   );
 }
 
-function ResourcesForCompletion() {
+function ResourcesForCompletion({ setActiveTab }) {
   return (
     <section className="section">
       <h2>3. Resources for Completion</h2>
@@ -297,18 +297,34 @@ function ResourcesForCompletion() {
           Then, assess each file individually via the questions below.
         </p>
         <p>
-          Open each file in the provided .ZIP folder and review it closely enough
-          to understand its purpose, structure, and relevance. Consider whether
-          the file formats, contents, level of detail, terminology, and
-          organization are consistent with real industry work. Also confirm that
-          each file is applicable to the task and supports the type of analysis
-          or deliverable requested in the Task Instructions. A task fails this
-          check if the files appear artificial, contain implausible or irrelevant
-          information, do not match their stated purpose, or would not reasonably
-          be used by a professional performing this work. If you answer
-          &quot;No,&quot; specify which files are not realistic and applicable to
-          the task described. Suggest improvements to the content of the files to
-          make them more realistic as applicable.
+          You can open the full contents of task required files in the{" "}
+          {setActiveTab ? (
+            <button
+              type="button"
+              className="inline-link"
+              onClick={() => setActiveTab("file-explorer")}
+            >
+              File Explorer
+            </button>
+          ) : (
+            <strong>File Explorer</strong>
+          )}{" "}
+          tab (select the task ID, then each file). You may also use the .ZIP
+          attached on the platform.
+        </p>
+        <p>
+          Open each file and review it closely enough to understand its purpose,
+          structure, and relevance. Consider whether the file formats, contents,
+          level of detail, terminology, and organization are consistent with
+          real industry work. Also confirm that each file is applicable to the
+          task and supports the type of analysis or deliverable requested in the
+          Task Instructions. A task fails this check if the files appear
+          artificial, contain implausible or irrelevant information, do not
+          match their stated purpose, or would not reasonably be used by a
+          professional performing this work. If you answer &quot;No,&quot;
+          specify which files are not realistic and applicable to the task
+          described. Suggest improvements to the content of the files to make
+          them more realistic as applicable.
         </p>
       </FieldGuide>
 
@@ -469,7 +485,9 @@ export function SubmissionSection({ focus = "overview", setActiveTab }) {
         <TaskInstructions setActiveTab={setActiveTab} />
       ) : null}
       {focus === "rubrics" ? <RubricsAndWeights /> : null}
-      {focus === "resources" ? <ResourcesForCompletion /> : null}
+      {focus === "resources" ? (
+        <ResourcesForCompletion setActiveTab={setActiveTab} />
+      ) : null}
       {focus === "overall" ? (
         <OverallAssessment setActiveTab={setActiveTab} />
       ) : null}
