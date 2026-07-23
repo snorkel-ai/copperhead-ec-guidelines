@@ -54,8 +54,19 @@ Educational context for computer-use agents is fine; attribution and outbound li
 
 ## Deploy (GitHub Pages)
 
-1. Create an empty GitHub repo (e.g. `project-copperhead-guidelines`).
-2. Add Actions variable `VITE_COPPERHEAD_WHITELIST` with the Copperhead email list.
-3. Push this folder as `main`.
-4. In repo Settings → Pages, set source to **GitHub Actions**.
-5. The workflow in `.github/workflows/deploy.yml` builds and publishes on every push to `main`.
+**Live site (public repo):** https://snorkel-ai.github.io/copperhead-ec-guidelines/
+
+Private repos publish to a random `*.pages.github.io` URL (e.g.
+`https://ideal-chainsaw-wnlr911.pages.github.io/`). For the
+`snorkel-ai.github.io/copperhead-ec-guidelines/` URL, the repository must be
+**public**.
+
+One-time setup:
+
+1. Repo **Settings → General → Danger Zone → Change repository visibility → Public**.
+2. Repo **Settings → Pages** → Source: **GitHub Actions** (not Jekyll / not Deploy from a branch).
+3. **Settings → Secrets and variables → Actions → Variables** → set `VITE_COPPERHEAD_WHITELIST` (comma- or newline-separated emails).
+4. Push to `main` (or **Actions → Deploy Project Copperhead Guidelines → Run workflow**).
+
+Vite `base` is `/copperhead-ec-guidelines/` so assets resolve on the org Pages
+URL. After changing visibility, redeploy so the build matches the public path.
