@@ -23,7 +23,7 @@ export function PayRatesSection() {
         </thead>
         <tbody>
           <tr>
-            <td>copperhead_pilot</td>
+            <td>Copperhead_Pilot</td>
             <td>$35.00</td>
             <td>Accepted Submission</td>
             <td>&mdash;</td>
@@ -50,9 +50,34 @@ export function PayRatesSection() {
         </thead>
         <tbody>
           <tr>
-            <td>copperhead_pilot</td>
+            <td>Copperhead_Pilot</td>
             <td>$15.00</td>
             <td>Review Performed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table
+        className="ch-pay-table ch-pay-table--bonuses"
+        aria-label="Limited Time Bonuses"
+      >
+        <thead>
+          <tr className="ch-pay-role-row ch-pay-role-row--bonuses">
+            <th colSpan={4}>Limited Time Bonuses</th>
+          </tr>
+          <tr className="ch-pay-colhead-row">
+            <th scope="col">Task Type</th>
+            <th scope="col">Additional Pay</th>
+            <th scope="col">Qualifier</th>
+            <th scope="col">Time Frame</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Copperhead_Pilot</td>
+            <td>$15.00</td>
+            <td>Accepted Submission</td>
+            <td>07/23/2026 9:00 AM PST - 07/26/2026 11:59 PM PST</td>
           </tr>
         </tbody>
       </table>

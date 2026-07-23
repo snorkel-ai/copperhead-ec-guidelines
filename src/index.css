@@ -543,7 +543,7 @@ a {
 
 .ch-pay-table {
   width: 100%;
-  max-width: 720px;
+  max-width: 900px;
   border-collapse: collapse;
   margin-top: 24px;
   font-size: 0.95rem;
@@ -551,25 +551,11 @@ a {
 
 .ch-pay-table th,
 .ch-pay-table td {
-  border: 1px solid #d1d5db;
+  border: 1px solid #9ca3af;
   padding: 10px 14px;
-  vertical-align: top;
-  min-height: 1.5em;
-}
-
-.ch-pay-table th:nth-child(1),
-.ch-pay-table td:nth-child(1) {
-  text-align: left;
-}
-
-.ch-pay-table th:nth-child(2),
-.ch-pay-table td:nth-child(2) {
+  vertical-align: middle;
   text-align: center;
-}
-
-.ch-pay-table th:nth-child(3),
-.ch-pay-table td:nth-child(3) {
-  text-align: left;
+  min-height: 1.5em;
 }
 
 .ch-pay-role-row th {
@@ -586,20 +572,24 @@ a {
   background: #dcfce7;
 }
 
+.ch-pay-role-row--bonuses th {
+  background: #fde8d0;
+}
+
 .ch-pay-colhead-row th {
   background: #f3f4f6;
   font-weight: 600;
   color: #374151;
-  text-align: left;
-}
-
-.ch-pay-colhead-row th:nth-child(2) {
   text-align: center;
 }
 
 .ch-pay-table tbody td {
   background: #ffffff;
   height: 42px;
+}
+
+.ch-pay-table--bonuses {
+  max-width: 980px;
 }
 
 @media (max-width: 640px) {
