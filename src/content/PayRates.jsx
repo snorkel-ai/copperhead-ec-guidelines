@@ -12,12 +12,13 @@ export function PayRatesSection() {
       <table className="ch-pay-table" aria-label="EC Submitter Role rates">
         <thead>
           <tr className="ch-pay-role-row ch-pay-role-row--submitter">
-            <th colSpan={3}>EC Submitter Role</th>
+            <th colSpan={4}>EC Submitter Role</th>
           </tr>
           <tr className="ch-pay-colhead-row">
             <th scope="col">Task Type</th>
             <th scope="col">Rate</th>
             <th scope="col">Qualifier</th>
+            <th scope="col">Time Period</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,13 @@ export function PayRatesSection() {
             <td>copperhead_pilot</td>
             <td>$35.00</td>
             <td>Accepted Submission</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <td>bonus</td>
+            <td>$15</td>
+            <td>Accepted submission</td>
+            <td>Valid 07/23 to 07/26 11:59PM PST</td>
           </tr>
         </tbody>
       </table>
