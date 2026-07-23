@@ -109,6 +109,13 @@
           "size_bytes": 3297
         },
         {
+          "name": "regulatory_complaint_tracker_export.pdf",
+          "path": "hmda_fair_lending_review/required_files/regulatory_complaint_tracker_export.pdf",
+          "kind": "required",
+          "ext": "pdf",
+          "size_bytes": 16948
+        },
+        {
           "name": "014_URGENT_Fair_Lending_Exam_Preliminary_Findings.eml",
           "path": "hmda_fair_lending_review/required_files/emails/014_URGENT_Fair_Lending_Exam_Preliminary_Findings.eml",
           "kind": "required",

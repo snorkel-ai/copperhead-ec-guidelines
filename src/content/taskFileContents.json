@@ -335,5 +335,8 @@
     "messages": [
       "Message(type='warning', message='Unrecognised paragraph style: Title (Style ID: Title)')"
     ]
+  },
+  "hmda_fair_lending_review/required_files/regulatory_complaint_tracker_export.pdf": {
+    "kind": "pdf"
   }
 }

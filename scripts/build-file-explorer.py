@@ -53,6 +53,7 @@ FILE_ORDER = {
         "consumer_complaint_log_2024.xlsx",
         "peer_lender_comparison_2024.csv",
         "branch_cra_performance_summary.pdf",
+        "regulatory_complaint_tracker_export.pdf",
     ],
 }
 
