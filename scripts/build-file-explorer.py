@@ -32,11 +32,41 @@ LABELS = {
     "health_gantt_89_discharge_plan_400": "Health Gantt — Discharge Plan 400",
 }
 
+# Keep File Explorer aligned with each pipeline task's files_readable field.
+# Entries represented by a folder rather than an individual file (such as the
+# HMDA Thunderbird inbox) sort after these named files.
+FILE_ORDER = {
+    "health_gantt_89_discharge_plan_400": [
+        "discharge_wave_baseline.gan",
+        "Discharge Transport Protocol.pdf",
+        "01 - Revision Packet - Round 1.pdf",
+        "02 - Revision Notice - Mid-week Pull-forward.pdf",
+        "03 - FINAL Same-Morning Tightening.pdf",
+    ],
+    "hmda_fair_lending_review": [
+        "hmda_lar_extract_2024.csv",
+        "ffiec_census_tract_extract_2025.csv",
+        "fair_lending_testing_methodology.docx",
+        "hmda_action_code_reference.docx",
+        "hmda_review_scope_notes.docx",
+        "prior_committee_summary.docx",
+        "consumer_complaint_log_2024.xlsx",
+        "peer_lender_comparison_2024.csv",
+        "branch_cra_performance_summary.pdf",
+    ],
+}
+
 
 def human_label(task_id: str) -> str:
     if task_id in LABELS:
         return LABELS[task_id]
     return task_id.replace("_", " ")
+
+
+def file_order_key(task_id: str, path: Path) -> tuple[int, str]:
+    order = FILE_ORDER.get(task_id, [])
+    positions = {name: index for index, name in enumerate(order)}
+    return (positions.get(path.name, len(order)), path.as_posix().lower())
 
 
 def build_manifest() -> dict:
@@ -52,9 +82,14 @@ def build_manifest() -> dict:
             kind_dir = task_dir / kind_dir_name
             if not kind_dir.is_dir():
                 continue
-            for f in sorted(kind_dir.rglob("*")):
-                if f.name.startswith(".") or not f.is_file():
-                    continue
+            candidates = [
+                f
+                for f in kind_dir.rglob("*")
+                if not f.name.startswith(".") and f.is_file()
+            ]
+            for f in sorted(
+                candidates, key=lambda path: file_order_key(task_dir.name, path)
+            ):
                 files.append(
                     {
                         "name": f.name,
