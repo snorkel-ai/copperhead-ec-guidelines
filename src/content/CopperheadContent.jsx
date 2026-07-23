@@ -4,6 +4,7 @@ import { GoodTaskSection } from "./GoodTask";
 import { EvaluateTaskSection } from "./EvaluateTask";
 import { SubmissionSection } from "./Submission";
 import { DifficultyRatingSection } from "./DifficultyRating";
+import { InstructionsRatingSection } from "./InstructionsRating";
 import { ReviewerGuidelinesSection } from "./ReviewerGuidelines";
 import { PayRatesSection } from "./PayRates";
 import { ReferenceSection } from "./Reference";
@@ -44,6 +45,7 @@ export const COPPERHEAD_TABS = [
           { key: "sub-complete", label: "5. Complete the Submission" },
         ],
       },
+      { key: "instructions-rating", label: "Rating Task Instructions" },
       { key: "difficulty", label: "Rating Task Difficulty" },
     ],
   },
@@ -78,6 +80,7 @@ export function buildCopperheadContent(setActiveTab) {
     "sub-complete": (
       <SubmissionSection focus="complete" setActiveTab={setActiveTab} />
     ),
+    "instructions-rating": <InstructionsRatingSection />,
     difficulty: <DifficultyRatingSection />,
     "reviewer-guidelines": <ReviewerGuidelinesSection />,
     "file-explorer": <FileExplorer />,
