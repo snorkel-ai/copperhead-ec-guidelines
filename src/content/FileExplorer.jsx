@@ -122,6 +122,43 @@ function FileViewer({ file }) {
     );
   }
 
+  if (cached.kind === "email") {
+    const h = cached.headers || {};
+    return (
+      <div className="fe-email">
+        <div className="fe-email-head">
+          <h3 className="fe-email-subject">{h.subject || "(no subject)"}</h3>
+          <dl className="fe-email-meta">
+            <div>
+              <dt>From</dt>
+              <dd>{h.from || "—"}</dd>
+            </div>
+            <div>
+              <dt>To</dt>
+              <dd>{h.to || "—"}</dd>
+            </div>
+            {h.date ? (
+              <div>
+                <dt>Date</dt>
+                <dd>{h.date}</dd>
+              </div>
+            ) : null}
+          </dl>
+        </div>
+        <div className="fe-email-body">
+          {cached.html ? (
+            <div
+              className="fe-docx-html"
+              dangerouslySetInnerHTML={{ __html: cached.html }}
+            />
+          ) : (
+            <pre className="fe-text">{cached.text}</pre>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   if (cached.kind === "html") {
     return (
       <div

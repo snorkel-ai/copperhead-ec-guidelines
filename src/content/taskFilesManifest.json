@@ -60,6 +60,76 @@
           "size_bytes": 6527
         },
         {
+          "name": "014_URGENT_Fair_Lending_Exam_Preliminary_Findings.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/014_URGENT_Fair_Lending_Exam_Preliminary_Findings.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 3233
+        },
+        {
+          "name": "018_Fair_Lending_Committee_-_March_Minutes.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/018_Fair_Lending_Committee_-_March_Minutes.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 3373
+        },
+        {
+          "name": "056_RE_Redlining_Risk_Assessment_Update.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/056_RE_Redlining_Risk_Assessment_Update.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 2675
+        },
+        {
+          "name": "064_Fwd_Complaint_CMP-2024-0012_Escalation.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/064_Fwd_Complaint_CMP-2024-0012_Escalation.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 2848
+        },
+        {
+          "name": "075_Branch_CRA_Action_Plans_-_Sensitive_Tracts.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/075_Branch_CRA_Action_Plans_-_Sensitive_Tracts.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 3566
+        },
+        {
+          "name": "085_Branch_WI-BR-003_Quarterly_Performance_Update.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/085_Branch_WI-BR-003_Quarterly_Performance_Update.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 2771
+        },
+        {
+          "name": "093_RE_Q3_HMDA_Data_Quality_Review.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/093_RE_Q3_HMDA_Data_Quality_Review.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 2952
+        },
+        {
+          "name": "127_Privileged_Fair_Lending_Risk_Exposure_Estimate.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/127_Privileged_Fair_Lending_Risk_Exposure_Estimate.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 3519
+        },
+        {
+          "name": "132_Tract_55079000100_Lending_Heatmap_Analysis.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/132_Tract_55079000100_Lending_Heatmap_Analysis.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 3062
+        },
+        {
+          "name": "137_Pricing_Exception_Audit_Results_-_December_2024.eml",
+          "path": "hmda_fair_lending_review/required_files/emails/137_Pricing_Exception_Audit_Results_-_December_2024.eml",
+          "kind": "required",
+          "ext": "eml",
+          "size_bytes": 2836
+        },
+        {
           "name": "fair_lending_testing_methodology.docx",
           "path": "hmda_fair_lending_review/required_files/fair_lending_testing_methodology.docx",
           "kind": "required",

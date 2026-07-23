@@ -16,6 +16,7 @@ Requires: mammoth, openpyxl (pip install mammoth openpyxl)
 from __future__ import annotations
 
 import json
+from email import message_from_bytes
 from pathlib import Path
 
 import mammoth
@@ -51,7 +52,7 @@ def build_manifest() -> dict:
             kind_dir = task_dir / kind_dir_name
             if not kind_dir.is_dir():
                 continue
-            for f in sorted(kind_dir.iterdir()):
+            for f in sorted(kind_dir.rglob("*")):
                 if f.name.startswith(".") or not f.is_file():
                     continue
                 files.append(
@@ -76,6 +77,40 @@ def build_manifest() -> dict:
 def find_preview_pdf(path: Path) -> Path | None:
     preview = path.parent.parent / "previews" / (path.stem + ".pdf")
     return preview if preview.is_file() else None
+
+
+def _decode_part(part) -> str:
+    payload = part.get_payload(decode=True)
+    if payload is None:
+        return ""
+    charset = part.get_content_charset() or "utf-8"
+    return payload.decode(charset, errors="replace")
+
+
+def parse_eml(path: Path) -> dict:
+    """Parse a .eml message into headers + decoded plain/html bodies."""
+    msg = message_from_bytes(path.read_bytes())
+    text_body = ""
+    html_body = ""
+    for part in msg.walk():
+        if part.get_content_maintype() == "multipart":
+            continue
+        ctype = part.get_content_type()
+        if ctype == "text/plain" and not text_body:
+            text_body = _decode_part(part)
+        elif ctype == "text/html" and not html_body:
+            html_body = _decode_part(part)
+    return {
+        "kind": "email",
+        "headers": {
+            "from": msg.get("From", ""),
+            "to": msg.get("To", ""),
+            "subject": msg.get("Subject", ""),
+            "date": msg.get("Date", ""),
+        },
+        "text": text_body,
+        "html": html_body,
+    }
 
 
 def build_contents() -> dict:
@@ -113,6 +148,8 @@ def build_contents() -> dict:
                     rows.pop()
                 sheets.append({"name": name, "rows": rows})
             contents[rel] = {"kind": "sheets", "sheets": sheets}
+        elif ext == "eml":
+            contents[rel] = parse_eml(path)
         elif ext in ("csv", "gan", "txt", "xml", "json", "md"):
             contents[rel] = {
                 "kind": "text",
