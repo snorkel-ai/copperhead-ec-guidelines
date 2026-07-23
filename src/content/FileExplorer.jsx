@@ -103,6 +103,25 @@ function FileViewer({ file }) {
     return <iframe className="fe-pdf-frame" title={file.name} src={url} />;
   }
 
+  if (cached.kind === "pdf-preview") {
+    return (
+      <div className="fe-pdf-preview">
+        <div className="fe-preview-note">
+          Rendered PDF preview of <strong>{file.name}</strong>.{" "}
+          <a href={url} download={file.name}>
+            Download the original file
+          </a>{" "}
+          to open it in its native application.
+        </div>
+        <iframe
+          className="fe-pdf-frame"
+          title={`${file.name} (PDF preview)`}
+          src={fileUrl(cached.preview)}
+        />
+      </div>
+    );
+  }
+
   if (cached.kind === "html") {
     return (
       <div

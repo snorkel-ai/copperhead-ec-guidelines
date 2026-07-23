@@ -7,6 +7,8 @@ Usage:
 Drop new task packs under:
   public/task-files/<task_id>/required_files/...
   public/task-files/<task_id>/distractor_files/...   (optional)
+  public/task-files/<task_id>/previews/<name>.pdf    (optional PDF preview for a
+      required/distractor file with the same stem, e.g. a .gan project file)
 
 Requires: mammoth, openpyxl (pip install mammoth openpyxl)
 """
@@ -71,14 +73,27 @@ def build_manifest() -> dict:
     return {"tasks": tasks}
 
 
+def find_preview_pdf(path: Path) -> Path | None:
+    preview = path.parent.parent / "previews" / (path.stem + ".pdf")
+    return preview if preview.is_file() else None
+
+
 def build_contents() -> dict:
     contents: dict = {}
     for path in sorted(TASK_FILES.rglob("*")):
         if not path.is_file() or path.name.startswith("."):
             continue
+        if path.parent.name == "previews":
+            continue
         rel = path.relative_to(TASK_FILES).as_posix()
         ext = path.suffix.lstrip(".").lower()
-        if ext == "docx":
+        preview = find_preview_pdf(path)
+        if preview is not None:
+            contents[rel] = {
+                "kind": "pdf-preview",
+                "preview": preview.relative_to(TASK_FILES).as_posix(),
+            }
+        elif ext == "docx":
             with path.open("rb") as f:
                 result = mammoth.convert_to_html(f)
             contents[rel] = {

@@ -803,6 +803,19 @@ a {
   display: block;
 }
 
+.fe-preview-note {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: #4b5563;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.fe-preview-note a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
 .fe-docx-html {
   padding: 20px 24px;
   font-size: 0.95rem;
