@@ -1,0 +1,46 @@
+ASTER ROW — NORTHBOUND LIGHTS — FULL-BAND REHEARSAL RUNNING ORDER
+Session: Friday 17 July 2026, 19:00, Studio B
+Issued by: Sam, Music Director (17 July 2026, 18:50)
+Packet: this running order + the printed cue grid (rehearsal_cue_sheet.pdf)
+
+TONIGHT'S RELEASED PATTERNS (exact Hydrogen names)
+1. Bridge Fill — sound-check and first band run
+2. Main Groove
+3. Main Groove B
+4. Intro Groove
+5. Outro Groove
+6. Outro Tag
+
+TONIGHT'S RELEASED KIT ROWS (exact Hydrogen names)
+Kick; Snare; Closed Hi-Hat; Open Hi-Hat; Crash; Ride; Low Tom; Mid Tom; Hand Clap
+
+SCOPE AND AUTHORITY
+- A cue is live tonight only when BOTH its exact pattern name and its exact kit-row
+  name appear in the two lists above. Anything else is out of set.
+- Do not create missing patterns or kit rows. Breakdown Count, Encore Funk, Cowbell,
+  Tambourine, and any other unlisted name belong to archive sets or alternate kits and
+  are not part of tonight's session.
+- Work from the cue grid. The grid is printed base-first with a CORRECTIONS block at the
+  end; I marked those corrections after the base pass, so where a corrections line names
+  the same pattern / kit row / step as a base line, the corrections line is the one that
+  stands. REPLACE changes that cell's velocity; CANCEL means the cell is OFF (not played).
+- Authority order: released-name scope first, then the base grid, then the corrections
+  block. A correction only touches the exact cell it names; every untouched cell carries
+  its base value forward.
+- Ignore the leftover sheets in the packet from other songs and other kits — they are
+  filed with us out of habit and have nothing to do with tonight.
+
+REHEARSAL ORDER
+Bridge Fill x2 (count-in pickup) > Main Groove x4 > Main Groove B x2 > Bridge Fill x1
+Intro Groove x1 > Main Groove x4 > Outro Groove x2 > Outro Tag x1 (hold final crash)
+
+LIVE-BALANCE NOTE
+We open on the Bridge to rehearse the pickup, so cue Bridge Fill up as the current
+pattern in the editor before I take over. Tom Alvarez wants to hear the snare pushed
+a little forward on that first pass, so Snare is the live-balance strip tonight — pull
+the snare channel up on the desk and leave the mixer sitting on it so I can ride its
+level while the band plays. On the grid, park the cursor on the snare cell I flagged for
+the pickup accent: Bridge Fill / Snare / step 32. That is the hit I'll be nudging live,
+so I want it selected and ready the moment I sit down.
+
+Printed for the rehearsal stand — Sam

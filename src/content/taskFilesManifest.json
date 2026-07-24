@@ -1,6 +1,47 @@
 {
   "tasks": [
     {
+      "id": "arts_hydrogen_192_pattern_cells_400",
+      "label": "Arts Hydrogen \u2014 Pattern Cells 400",
+      "files": [
+        {
+          "name": "source_song.h2song",
+          "path": "arts_hydrogen_192_pattern_cells_400/required_files/source_song.h2song",
+          "kind": "required",
+          "ext": "h2song",
+          "size_bytes": 39544
+        },
+        {
+          "name": "rehearsal_running_order.txt",
+          "path": "arts_hydrogen_192_pattern_cells_400/required_files/rehearsal_running_order.txt",
+          "kind": "required",
+          "ext": "txt",
+          "size_bytes": 2475
+        },
+        {
+          "name": "rehearsal_cue_sheet.pdf",
+          "path": "arts_hydrogen_192_pattern_cells_400/required_files/rehearsal_cue_sheet.pdf",
+          "kind": "required",
+          "ext": "pdf",
+          "size_bytes": 5448
+        },
+        {
+          "name": "director_addendum_1.txt",
+          "path": "arts_hydrogen_192_pattern_cells_400/required_files/director_addendum_1.txt",
+          "kind": "required",
+          "ext": "txt",
+          "size_bytes": 787
+        },
+        {
+          "name": "director_addendum_2.txt",
+          "path": "arts_hydrogen_192_pattern_cells_400/required_files/director_addendum_2.txt",
+          "kind": "required",
+          "ext": "txt",
+          "size_bytes": 1087
+        }
+      ]
+    },
+    {
       "id": "health_gantt_89_discharge_plan_400",
       "label": "Health Gantt \u2014 Discharge Plan 400",
       "files": [

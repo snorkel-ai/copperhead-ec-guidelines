@@ -1,0 +1,15 @@
+ASTER ROW — NORTHBOUND LIGHTS — ADDENDUM TO REHEARSAL PACKET (1 of 2)
+Issued by: Sam, Music Director (17 July 2026, 19:15 — handed to the drum-machine
+operator mid-setup, after the printed packet went out)
+
+Caught two things sound-checking the room that the printed packet didn't have:
+
+1. Main Groove B / Kick / step 28 — the printed correction (0.74) undersells it in this
+   room. Push that hit to 0.90 instead. This changes that one cell only; nothing else in
+   the printed CORRECTIONS block moves.
+
+2. Bridge Fill needs an accent the printed grid never had: Snare, step 8, velocity 0.85.
+   Add it fresh — it isn't a correction to anything printed, it's new.
+
+Everything else in the packet — base grid, corrections, running order — stands exactly
+as printed. — Sam

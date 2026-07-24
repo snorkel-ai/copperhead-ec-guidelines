@@ -28,6 +28,7 @@ MANIFEST_OUT = ROOT / "src" / "content" / "taskFilesManifest.json"
 CONTENTS_OUT = ROOT / "src" / "content" / "taskFileContents.json"
 
 LABELS = {
+    "arts_hydrogen_192_pattern_cells_400": "Arts Hydrogen — Pattern Cells 400",
     "hmda_fair_lending_review": "HMDA Fair Lending Review",
     "health_gantt_89_discharge_plan_400": "Health Gantt — Discharge Plan 400",
 }
@@ -36,6 +37,13 @@ LABELS = {
 # Entries represented by a folder rather than an individual file (such as the
 # HMDA Thunderbird inbox) sort after these named files.
 FILE_ORDER = {
+    "arts_hydrogen_192_pattern_cells_400": [
+        "source_song.h2song",
+        "rehearsal_running_order.txt",
+        "rehearsal_cue_sheet.pdf",
+        "director_addendum_1.txt",
+        "director_addendum_2.txt",
+    ],
     "health_gantt_89_discharge_plan_400": [
         "discharge_wave_baseline.gan",
         "Discharge Transport Protocol.pdf",
@@ -186,7 +194,7 @@ def build_contents() -> dict:
             contents[rel] = {"kind": "sheets", "sheets": sheets}
         elif ext == "eml":
             contents[rel] = parse_eml(path)
-        elif ext in ("csv", "gan", "txt", "xml", "json", "md"):
+        elif ext in ("csv", "gan", "h2song", "txt", "xml", "json", "md"):
             contents[rel] = {
                 "kind": "text",
                 "text": path.read_text(encoding="utf-8", errors="replace"),
